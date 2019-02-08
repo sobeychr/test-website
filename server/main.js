@@ -7,7 +7,7 @@ const express = require('express');
 const app = express();
 
 require('./config/route')(app, express);
-require('./request/message')(app, express);
+require('./request/page')(app, express);
 
 var server = app.listen(process.env.PORT, () => {
     
