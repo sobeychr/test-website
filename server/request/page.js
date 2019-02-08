@@ -22,6 +22,6 @@ module.exports = (app, express) => {
         }
 
         const pageData = require(loadPage);
-        response.send(pageData);
+        response.json(pageData);
     });
 };
