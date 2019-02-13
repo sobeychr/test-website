@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+    <link rel='icon' href='/asset/icon/<?=$this->icon?>.png'>
+    -->
+    <link rel='stylesheet' type='text/css' href='/asset/css/chat.css'>
+
+    <script src='/asset/js/jquery.js'></script>
+    <script src='/socket.io/socket.io.js'></script>
+    <title>Message</title>
+
+    <script>
+        const fPopulateEntry = message => {
+            var $html = $('.main__messages__entry.template').clone();
+            $html.removeClass('template');
+            $html.find('.main__messages__entry__name-name').text(message.name);
+            $html.find('.main__messages__entry__body').text(message.body);
+
+            $('.main__messages').append($html);
+        };
+
+        $(() => {
+            //var socket = io();
+            
+            $.get('/message', messageList => {
+                messageList.forEach(fPopulateEntry);
+            });
+
+            $(document, '.main__form').on('submit', e => {
+                e.preventDefault();
+
+                var data = {
+                    name: $('.main__form__name').val(),
+                    body: $('.main__form__body').val()
+                };
+
+                //console.log('posting', name, body);
+                $.post('/message', data, result => {
+                    fPopulateEntry(result);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Chat</h1>
+    <main class='main'>
+        <form class='main__form' action='' method='post' autocomplete='off'>
+            <!--
+            <input type='text' class='main__form__name' placeholder='Name'/>
+            -->
+            <select class='main__form__name'>
+                <option value='Wick'>Wick</option>
+                <option value='John'>John</option>
+                <option value='Marcel'>Marcel</option>
+            </select>
+
+            <textarea class='main__form__body' placeholder='message'></textarea>
+            <button type='submit' class='main__form__submit'>Send</button>
+        </form>
+
+        <div class='main__messages'>
+            <div class='main__messages__entry template'>
+                <p class='main__messages__entry__name'>
+                    <span class='main__messages__entry__name-from'>From</span>
+                    <span class='main__messages__entry__name-name'></span>
+                </p>
+                <p class='main__messages__entry__body'></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
