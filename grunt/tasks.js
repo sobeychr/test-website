@@ -5,7 +5,11 @@ module.exports = grunt => {
     const dirModule = './module/';
     const dirTask   = './task/';
     const modules = {
-            'sass': 'grunt-contrib-sass'
+            'autoprefixer': 'grunt-autoprefixer',
+            'babel': 'grunt-babel',
+            'clean': 'grunt-contrib-clean',
+            'copy':  'grunt-contrib-copy',
+            'sass':  'grunt-contrib-sass'
         };
 
     // Loads modules

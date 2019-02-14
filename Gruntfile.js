@@ -2,6 +2,7 @@
 
 module.exports = grunt => {
     require('./grunt/configs.js')(grunt);
+    require('./grunt/functions.js')(grunt);
     
     const pkg = grunt.file.readJSON('./package.json');
     const now = grunt.template.today('yyyy-mm-dd HH:MM::ss');
