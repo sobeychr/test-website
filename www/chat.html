@@ -4,6 +4,7 @@
     <!--
     <link rel='icon' href='/asset/icon/<?=$this->icon?>.png'>
     -->
+    <link rel='stylesheet' type='text/css' href='/asset/css/default.css'>
     <link rel='stylesheet' type='text/css' href='/asset/css/chat.css'>
 
     <script src='/asset/js/jquery.js'></script>
@@ -12,6 +13,8 @@
 
     <script>
         const fPopulateEntry = message => {
+            console.log('fPopulateEntry', message);
+
             var $html = $('.main__messages__entry.template').clone();
             $html.removeClass('template');
             $html.find('.main__messages__entry__name-name').text(message.name);
@@ -21,11 +24,13 @@
         };
 
         $(() => {
-            //var socket = io();
+            var socket = io();
             
             $.get('/message', messageList => {
                 messageList.forEach(fPopulateEntry);
             });
+
+            socket.on('newMessage', fPopulateEntry);
 
             $(document, '.main__form').on('submit', e => {
                 e.preventDefault();
@@ -35,10 +40,7 @@
                     body: $('.main__form__body').val()
                 };
 
-                //console.log('posting', name, body);
-                $.post('/message', data, result => {
-                    fPopulateEntry(result);
-                });
+                $.post('/message', data);
             });
         });
     </script>

@@ -1,0 +1,7 @@
+.main {
+    max-width: 750px;
+    width: 90%;
+}
+
+@import './page/chat/form';
+@import './page/chat/message';

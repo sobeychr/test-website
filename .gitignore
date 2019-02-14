@@ -1,3 +1,5 @@
 \.env
+/asset/css
+/asset/js
 /data/cache
 /node_modules
