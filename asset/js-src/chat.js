@@ -1,6 +1,4 @@
 const fPopulateEntry = message => {
-    console.log('fPopulateEntry', message);
-
     var $html = $('.main__messages__entry.template').clone();
     $html.removeClass('template');
     $html.find('.main__messages__entry__name-name').text(message.name);

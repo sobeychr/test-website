@@ -5,7 +5,8 @@ module.exports = grunt => {
         '00'  : '',
         'css' : 'Builds CSS from SASS and Autoprefixer',
         'js'  : 'Compiles JS from \'js-src/\' folder',
-        '01'  : '',
+        'watch' : 'Watches CSS and JS source files',
+        '01' : '',
         'asset' : 'Executes CSS and JS commands'
     };
 

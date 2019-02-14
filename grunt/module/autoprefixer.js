@@ -1,9 +1,14 @@
 'use strict';
 
 module.exports = grunt => {
+    const pkg = grunt.file.readJSON('./package.json');
+    const browsers = pkg.browserslist;
+
     return {
         options: {
-            browsers: ['last 2 versions', 'ie 8', 'ie 9']
+            browsers,
+            map: false,
+            remove: false
         },
         dist: {
             files: [{

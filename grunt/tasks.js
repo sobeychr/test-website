@@ -10,7 +10,8 @@ module.exports = grunt => {
             'clean':  'grunt-contrib-clean',
             'copy':   'grunt-contrib-copy',
             'sass':   'grunt-contrib-sass',
-            'uglify': 'grunt-contrib-uglify'
+            'uglify': 'grunt-contrib-uglify',
+            'watch':  'grunt-contrib-watch'
         };
 
     // Loads modules

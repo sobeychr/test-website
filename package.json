@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "nodemon server/main",
+        "init": "npm i && npx browserslist",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
@@ -16,6 +17,10 @@
     "bugs": {
         "url": "https://github.com/sobeychr/test-website/issues"
     },
+    "browserslist": [
+        "last 5 versions",
+        "ie >= 9"
+    ],
     "homepage": "https://github.com/sobeychr/test-website#readme",
     "dependencies": {
         "body-parser": "^1.18.3",
@@ -34,6 +39,7 @@
         "grunt-contrib-clean": "^2.0.0",
         "grunt-contrib-copy": "^1.0.0",
         "grunt-contrib-sass": "^1.0.0",
-        "grunt-contrib-uglify": "^4.0.0"
+        "grunt-contrib-uglify": "^4.0.0",
+        "grunt-contrib-watch": "^1.1.0"
     }
 }
