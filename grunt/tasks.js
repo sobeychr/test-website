@@ -6,10 +6,11 @@ module.exports = grunt => {
     const dirTask   = './task/';
     const modules = {
             'autoprefixer': 'grunt-autoprefixer',
-            'babel': 'grunt-babel',
-            'clean': 'grunt-contrib-clean',
-            'copy':  'grunt-contrib-copy',
-            'sass':  'grunt-contrib-sass'
+            'babel':  'grunt-babel',
+            'clean':  'grunt-contrib-clean',
+            'copy':   'grunt-contrib-copy',
+            'sass':   'grunt-contrib-sass',
+            'uglify': 'grunt-contrib-uglify'
         };
 
     // Loads modules

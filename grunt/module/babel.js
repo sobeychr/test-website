@@ -14,13 +14,20 @@ module.exports = grunt => {
 
     return {
         options: {
-            presets: ['@babel/preset-env']
+            presets: ['@babel/preset-env'],
+            sourceMap: false
         },
         dev: {
             files,
             options: {
                 sourceMap: true
             }
+        },
+        stage: {
+            files
+        },
+        live: {
+            files
         }
     };
 };
