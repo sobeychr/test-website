@@ -6,7 +6,7 @@
     "scripts": {
         "start": "nodemon server/main",
         "init": "npm i && npm i -g sass && npx browserslist",
-        "update" "npm i && npx browserslist"
+        "update": "npm i && npx browserslist"
     },
     "repository": {
         "type": "git",

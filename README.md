@@ -2,14 +2,15 @@
 
 ## Installation
 
-- **Install** : `npm run init`
+- **Install**: `npm run init`
 - **Update**: `npm run update`
 - Install [**Ruby**](http://www.ruby-lang.org/en/downloads/) and [**Sass**](http://sass-lang.com/install)
   - [_Dependency_](https://github.com/gruntjs/grunt-contrib-sass)
   - `ruby -v` most indicate a proper version
   - `gem install sass` installs Sass from Ruby
+- **Run server**: `npm start`
 
-## Development
+## Front-End
 
 - `grunt` list all available commands
   - `grunt asset`
@@ -27,7 +28,17 @@ _incomplete_
 
 Some development content is stored in local JSON files under `data/`. `data/cache/` is ignored and planned for any cached search results.
 
-### Configuring Grunt
+## Back-End
+
+_incomplete_
+
+The server is a Node-based server. Files are located in `server/`. The main file imports _require()_ files building up the server.
+
+Files located in `server/config/` are designed to handled browsing-like and asset-like requests.
+
+Files located in `server/request/` are designed to handled API-like requests.
+
+## Configuring Grunt
 
 Grunt is run on the root directory. Its configuration is stored in `grunt/`. Directly under `grunt/` are global configurations, re-usable functions and loading tasks.
 
@@ -35,7 +46,7 @@ Grunt dependencies are under `grunt/module/`.
 
 Grunt available tasks are under `grunt/task/`.
 
-#### Add a module
+### Add a module
 
 1. Run the NPM installer
   - Example `npm i grunt-contrib-copy --D`
@@ -54,7 +65,7 @@ const modules = {
 3. Add the module file; _copying from an existing file is recommended_
   - Example `grunt/module/copy.js`
 
-#### Add a task
+### Add a task
 
 Add the task file; _copying from an existing file is recommended_
   - Example `grunt/task/test.js`
