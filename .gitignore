@@ -2,4 +2,5 @@
 /asset/css
 /asset/js
 /data/cache
+/grunt/.sass-cache
 /node_modules

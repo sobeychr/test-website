@@ -12,9 +12,9 @@ module.exports = grunt => {
             trace: true,
             files: [{
                 expand: true,
-                cwd:  './asset/',
-                src:  ['/scss/*.scss'],
-                dest: 'css/',
+                cwd: './asset/scss/',
+                src:  ['**/*.scss'],
+                dest: './asset/css/',
                 ext:  '.css'
             }]
         }
