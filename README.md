@@ -34,7 +34,9 @@ _incomplete_
 
 The server is a Node-based server. Files are located in `server/`. The main file imports _require()_ files building up the server.
 
-Files located in `server/config/` are designed to handled browsing-like and asset-like requests.
+Files located in `server/config/` are designed to set up the basics of the server; automatically loading Requests, listening to the host, starting the SocketIO, and handling static requests.
+
+Files located in `server/middleware/` are designed to set up middlewares in requests.
 
 Files located in `server/request/` are designed to handled API-like requests.
 

@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "from": "Test",
+        "body": "alpha"
+    },
+    {
+        "id": 2,
+        "from": "Alpha",
+        "body": "Lorem ipsum dolor sit amet"
+    },
+    {
+        "id": 3,
+        "from": "Beta",
+        "body": "Vivamus vestibulum porta ultrices"
+    },
+    {
+        "id": 4,
+        "from": "Gamma",
+        "body": "Pellentesque ullamcorper ac elit eget bibendum"
+    }
+]

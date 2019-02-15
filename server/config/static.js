@@ -1,10 +1,13 @@
 'use strict';
 
 module.exports = (app, express) => {
-
     const path    = require('path');
     const rootDir = __dirname + '/../../';
-    const alias   = require('./alias.json');
+    const alias   = {
+            "/"       : "www/",
+            "/asset/" : "asset/",
+            "/image/" : "asset/image/"
+        };
     const options = {
         extensions: ['html', 'php']
     };
