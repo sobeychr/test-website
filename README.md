@@ -14,6 +14,8 @@
 
 - `grunt` list all available commands
   - `grunt asset`
+  - `grunt build`
+  - `grunt static`
   - `grunt watch`
 
 ### Assets
@@ -21,6 +23,7 @@
 - CSS are builds via SCSS files in `assets/scss/` and compiled via **Grunt**. It is recommended to have a single final file per webpage with its compiled content.
 - JS are builds in `assets/js-src/` and compiled via **Babel**. Stage and Live also use **Uglify**.
   - Minified JS files (_*.min.js_) are simply copied into the destination folder.
+- Static HTML pages are builds via HTML templates in `static/` and compiled via **Grunt**. Re-usable templates and page-specific templates are located in sub-folders. Stage and Live also use **HtmlMin**.
 
 ### Database
 

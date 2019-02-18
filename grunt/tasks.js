@@ -9,6 +9,7 @@ module.exports = grunt => {
             'babel':  'grunt-babel',
             'clean':  'grunt-contrib-clean',
             'copy':   'grunt-contrib-copy',
+            'htmlmin':'grunt-contrib-htmlmin',
             'sass':   'grunt-contrib-sass',
             'string-replace':'grunt-string-replace',
             'uglify': 'grunt-contrib-uglify',
