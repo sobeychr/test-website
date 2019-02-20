@@ -2,35 +2,10 @@
 <html>
 <head>
     <!-- @import CSS default chat -->
-    <!-- @import JS jquery.min chat /socket.io/socket.io -->
+    <!-- @import JS chat -->
     <title>Chat</title>
 </head>
 <body>
-    <h1>Chat</h1>
-    <main class='main'>
-        <form class='main__form' action='' method='post' autocomplete='off'>
-            <!--
-            <input type='text' class='main__form__name' placeholder='Name'/>
-            -->
-            <select class='main__form__name'>
-                <option value='Wick'>Wick</option>
-                <option value='John'>John</option>
-                <option value='Marcel'>Marcel</option>
-            </select>
-
-            <textarea class='main__form__body' placeholder='message'></textarea>
-            <button type='submit' class='main__form__submit'>Send</button>
-        </form>
-
-        <div class='main__messages'>
-            <div class='main__messages__entry template'>
-                <p class='main__messages__entry__name'>
-                    <span class='main__messages__entry__name-from'>From</span>
-                    <span class='main__messages__entry__name-name'></span>
-                </p>
-                <p class='main__messages__entry__body'></p>
-            </div>
-        </div>
-    </main>
+    <div id='app'></id>
 </body>
 </html>
