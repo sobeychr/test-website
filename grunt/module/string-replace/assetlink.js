@@ -12,7 +12,7 @@ module.exports = grunt => {
         const rootPath = '/asset/' + extension + '/';
         const regExt = new RegExp('\.' + extension + '$');
 
-        var links = list.map(entry => {
+        var links = list.filter(entry => entry.trim().length > 0).map(entry => {
             let path = entry;
 
             if(!regRoot.test(path)) {

@@ -5,9 +5,10 @@ module.exports = grunt => {
         '00'  : '',
         'css' : 'Builds CSS from SASS and Autoprefixer',
         'js'  : 'Compiles JS from \'js-src/\' folder',
-        'watch' : 'Watches CSS and JS source files',
+        'static': 'Compiles static HTML pages',
         '01' : '',
-        'asset' : 'Executes CSS and JS commands'
+        'asset' : 'Executes CSS and JS commands',
+        'watch' : 'Watches HTML, CSS and JS source files'
     };
 
     grunt.registerTask('default', () => {

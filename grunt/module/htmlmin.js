@@ -10,7 +10,7 @@ module.exports = grunt => {
                 decodeEntities: true,
                 //ignoreCustomFragments: [],
                 preventAttributesEscaping: true,
-                quoteCharacter: '"',
+                //quoteCharacter: "\"",
                 removeComments: true,
                 removeEmptyAttributes: true
             },
