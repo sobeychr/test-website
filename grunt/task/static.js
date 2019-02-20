@@ -1,9 +1,10 @@
 'use strict';
 
 module.exports = grunt => {
-    var isStage = grunt.config.get('isStage'),
-        isLive  = grunt.config.get('isLive'),
-        tasks = [];
+    const isStage = grunt.config.get('isStage');
+    const isLive  = grunt.config.get('isLive');
+    const isReload = grunt.config.get('isReload');
+    var tasks = [];
 
     // Compiles templates
     tasks.push('string-replace:static');
@@ -11,6 +12,11 @@ module.exports = grunt => {
     // HTMLMIN
     if(isStage || isLive) {
         tasks.push('htmlmin:static');
+    }
+
+    // LIVERELOAD
+    if(isReload) {
+        tasks.push('string-replace:reload');
     }
 
     grunt.registerTask('static', tasks);

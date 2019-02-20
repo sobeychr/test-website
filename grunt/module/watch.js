@@ -1,13 +1,13 @@
 'use strict';
 
 module.exports = grunt => {
-
-    /*
-    grunt.event.on('watch', (action, filepath, target) => {
-        grunt.log.writeln('>> watch', action, filepath, target);
-    });
-    */
+    const isReload = grunt.config.get('isReload');
     const fParseDate = grunt.config.get('fParseDate');
+
+    var htmlOptions = {};
+    if(isReload) {
+        htmlOptions = {atBegin: true};
+    }
 
     return {
         options: {
@@ -22,7 +22,9 @@ module.exports = grunt => {
                     dateStr['grey']
                 );
                 grunt.log.writeln('...');
-            }
+            },
+            atBegin: isReload,
+            livereload: isReload
         },
         css: {
             files: ['./asset/scss/**/*.scss'],

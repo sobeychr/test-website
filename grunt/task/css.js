@@ -1,9 +1,9 @@
 'use strict';
 
 module.exports = grunt => {
-    var fApplyEnv = grunt.config.get('fApplyEnv'),
-        isLive = grunt.config.get('isLive'),
-        tasks  = [];
+    const fApplyEnv = grunt.config.get('fApplyEnv');
+    const isLive = grunt.config.get('isLive');
+    var tasks  = [];
 
     // SASS
     tasks.push( fApplyEnv('sass') );

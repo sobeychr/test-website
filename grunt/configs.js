@@ -7,8 +7,12 @@ module.exports = grunt => {
     const isStage = typeof(env) !== 'undefined' && env === 'stage';
     const isLive  = typeof(env) !== 'undefined' && env === 'live';
 
+    const isReload = grunt.option('reload') === true;
+
     grunt.config.set('env', env);
     grunt.config.set('isDev',   isDev);
     grunt.config.set('isStage', isStage);
     grunt.config.set('isLive',  isLive);
+
+    grunt.config.set('isReload', isReload);
 };

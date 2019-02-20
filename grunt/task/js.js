@@ -1,10 +1,10 @@
 'use strict';
 
 module.exports = grunt => {
-    var fApplyEnv = grunt.config.get('fApplyEnv'),
-        isStage = grunt.config.get('isStage'),
-        isLive  = grunt.config.get('isLive'),
-        tasks = [];
+    const fApplyEnv = grunt.config.get('fApplyEnv');
+    const isStage = grunt.config.get('isStage');
+    const isLive  = grunt.config.get('isLive');
+    var tasks = [];
 
     // COPY
     tasks.push('copy:jsmin');

@@ -2,8 +2,10 @@
 
 module.exports = grunt => {
     const { assetLinks, assetExtensions } = require('./string-replace/assetlink')(grunt);
+    const reload = require('./string-replace/reload')(grunt);
 
     return {
+        reload,
         static: {
             files: [{
                 expand: true,

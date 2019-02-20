@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = grunt => {
-
     const fGetTemplate = grunt.config.get('fGetTemplate');
 
     const assetExtensions = ['css', 'js'];
