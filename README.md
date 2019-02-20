@@ -17,6 +17,8 @@
   - `grunt build`
   - `grunt static`
   - `grunt watch`
+  - `grunt watch --reload`
+  - `grunt [command] --env=(dev|stage|live)` - _grunt build --env=stage_
 
 ### Assets
 

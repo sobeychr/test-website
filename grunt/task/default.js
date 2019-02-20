@@ -8,7 +8,10 @@ module.exports = grunt => {
         'static': 'Compiles static HTML pages',
         '01' : '',
         'asset' : 'Executes CSS and JS commands',
-        'watch' : 'Watches HTML, CSS and JS source files'
+        'watch' : 'Watches HTML, CSS and JS source files',
+        'watch --reload' : 'Watches files with "live reload"',
+        '02' : '',
+        '--env=(dev|stage|live)' : 'runs as "dev", "stage" or "live" configs'
     };
 
     grunt.registerTask('default', () => {
