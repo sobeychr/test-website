@@ -11,6 +11,9 @@ module.exports = grunt => {
         'watch' : 'Watches HTML, CSS and JS source files',
         'watch --reload' : 'Watches files with "live reload"',
         '02' : '',
+        'clean:generated' : 'Cleans generated files',
+        'clean:test' : 'Cleans specific files during development',
+        '03' : '',
         '--env=(dev|stage|live)' : 'runs as "dev", "stage" or "live" configs'
     };
 
